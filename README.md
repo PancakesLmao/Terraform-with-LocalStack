@@ -1,6 +1,11 @@
 # Running Terraform with Localstack
+<div style="display: flex; justify-content: center; gap: 30px;">
+  <img src="./localstack.svg" width="400" style="vertical-align: middle;" />
+  <img src="./terraform.svg" width="400" style="vertical-align: middle;" />
+</div>
 
-> #### Notice: *LocalStack emulates AWS services locally. However, it is not a full AWS replacement. For example, EC2 is only simulated as metadata (no real VM is created), and S3 does not provide real public web hosting like AWS.*
+This repo show you how to setup and run Terraform along with LocalStack
+
 # Prerequisites
 - Localstack Account (for token)
 - AWS CLI v2
@@ -20,7 +25,7 @@ Terraform-with-LocalStack/
 └── <you_app_name>/
     ├── backend/
     │   ├── Dockerfile
-    └── frontend/
+    ├── frontend/
 	│	└── dist/
 ```
 
@@ -84,4 +89,5 @@ aws --endpoint-url=http://127.0.0.1:4566 s3 ls
 # Then you are good
 ```
 Try access it via `http://localhost:4566/<s3-name>`
-> Note: *This is not real S3 web hosting. It only simulates object storage behavior.*
+
+> Notice: *LocalStack emulates AWS services locally. However, it is not a full AWS replacement. For example, EC2 is only simulated as metadata (no real VM is created), and S3 does not provide real public web hosting like AWS.*
