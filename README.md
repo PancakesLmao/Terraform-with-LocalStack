@@ -85,6 +85,8 @@ docker rm <localstack>
 ```
 
 ## Checking
+n LocalStack, the S3 website endpoint follows the following format: http://<BUCKET_NAME>.s3-website.localhost.localstack.cloud:4566.  
+You can navigate to http://testwebsite.s3-website.localhost.localstack.cloud:4566/ to view your static website.
 ```
 aws --endpoint-url=http://127.0.0.1:4566 s3 ls  
 # If this show up: 2026-04-02 23:02:24 <s3-name>  

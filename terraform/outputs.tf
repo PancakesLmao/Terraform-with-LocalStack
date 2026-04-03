@@ -1,9 +1,22 @@
 output "instance_id" {
-  value = aws_instance.demo.id
+  value = aws_instance.backend.id
+}
+
+output "arn" {
+  description = "ARN of the bucket"
+  value       = aws_s3_bucket.frontend.arn
 }
 
 output "bucket_name" {
+  description = "Name (id) of the bucket"
   value = aws_s3_bucket.frontend.bucket
+}
+
+output "website_url" {
+  value = "http://${aws_s3_bucket.frontend.bucket}.mc-server.fluffy-gacrux.ts.net:4566"
+}
+output "direct_index_url" {
+  value = "http://${aws_s3_bucket.frontend.bucket}.mc-server.fluffy-gacrux.ts.net:4566/index.html"
 }
 
 output "uploaded_files_count" {
