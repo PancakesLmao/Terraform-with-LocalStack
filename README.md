@@ -122,3 +122,7 @@ aws --endpoint-url=http://localhost:4566 ec2 describe-instances --query "Reserva
 ```bash
 aws --endpoint-url=http://localhost:4566 ec2 describe-instances --query "Reservations[].Instances[].InstanceId"
 ```
+
+# References
+- [Service Docs - https://docs.localstack.cloud/aws/services/](https://docs.localstack.cloud/aws/services/)
+- [Reference Tutorial - https://docs.localstack.cloud/aws/tutorials/s3-static-website-terraform/](https://docs.localstack.cloud/aws/tutorials/s3-static-website-terraform/)
