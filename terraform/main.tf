@@ -19,6 +19,7 @@ resource "aws_s3_object" "frontend_files" {
     "png"  = "image/png",
     "jpg"  = "image/jpeg",
     "svg"  = "image/svg+xml",
+    "gif"  = "image/gif",
   }, reverse(split(".", each.value))[0], "binary/octet-stream")
 }
 
@@ -60,8 +61,8 @@ resource "aws_instance" "backend" {
   key_name      = "my-key"
 
   user_data = templatefile("${path.module}/user_data.sh", {
-    repo_url = "https://github.com/PancakesLmao/Pankeki-Express.git"
-    branch   = "dev"
+    repo_url = var.repo_url
+    branch   = var.branch
   })
 
   tags = {

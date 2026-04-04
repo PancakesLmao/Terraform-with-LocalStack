@@ -1,8 +1,9 @@
 .env
 .env.*
+*.pem
 *.tfvars
 *.tfstate
-*.tfstate.backup
+*.tfstate.*
 .terraform/
 *.lock.hcl
 tfplan
