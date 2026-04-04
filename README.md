@@ -1,7 +1,7 @@
 # Running Terraform with Localstack
 <div style="display: flex; justify-content: center; gap: 30px;">
   <img src="./localstack.svg" width="350" style="vertical-align: middle;" />
-  <img src="./terraform_on_darkbg.webp" width="350" style="vertical-align: middle;" />
+  <img src="./terraform_on_darkbg.webp" width="400" style="vertical-align: middle;" />
 </div>
 
 This repository demonstrates how to set up and run Terraform together with LocalStack for local AWS infrastructure simulation.
@@ -9,10 +9,10 @@ This repository demonstrates how to set up and run Terraform together with Local
 > *Do not use LocalStack for commercial purposes under the Hobby plan.*
 
 # Prerequisites
-- LocalStack Account (for token)
-- AWS CLI v2
-- Docker
-- Terraform
+- [LocalStack](https://docs.localstack.cloud/aws/getting-started/installation/) Account (for token)
+- [AWS CLI v2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- [Docker](https://docs.docker.com/engine/install/)
+- [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 
 # Folder structure
 ```

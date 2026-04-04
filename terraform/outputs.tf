@@ -13,10 +13,10 @@ output "bucket_name" {
 }
 
 output "website_url" {
-  value = "http://${aws_s3_bucket.frontend.bucket}.mc-server.fluffy-gacrux.ts.net:4566"
+  value = "http://${aws_s3_bucket.frontend.bucket}.localhost.localstack.cloud:4566"
 }
 output "direct_index_url" {
-  value = "http://${aws_s3_bucket.frontend.bucket}.mc-server.fluffy-gacrux.ts.net:4566/index.html"
+  value = "http://${aws_s3_bucket.frontend.bucket}.localhost:4566/index.html"
 }
 
 output "uploaded_files_count" {
