@@ -5,7 +5,7 @@ resource "aws_s3_bucket" "frontend" {
 }
 
 resource "aws_s3_object" "frontend_files" {
-  for_each = fileset("${path.module}/../Pankeki-Express/frontend/dist", "**/*")
+  for_each = fileset("${path.module}/../<project-name>/frontend/dist", "**/*")
 
   bucket       = aws_s3_bucket.frontend.bucket
   key          = each.value
